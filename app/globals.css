@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Brand palette — change values here to re-theme the whole site (RGB channels). */
+:root {
+  --forest: 7 59 45;        /* #073B2D */
+  --forest-dark: 3 41 31;   /* #03291F */
+  --forest-deep: 11 74 53;  /* #0B4A35 */
+  --moss: 70 111 42;        /* #466F2A */
+  --leaf: 119 166 59;       /* #77A63B */
+  --sage: 199 216 165;      /* #C7D8A5 */
+  --cream: 246 242 233;     /* #F6F2E9 */
+  --ivory: 252 249 242;     /* #FCF9F2 */
+  --champagne: 213 196 157; /* #D5C49D */
+  --walnut: 59 33 19;       /* #3B2113 */
+  --wood: 74 41 23;         /* #4A2917 */
+  --charcoal: 23 26 24;     /* #171A18 */
+}
+
+@layer base {
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body { @apply bg-ivory font-sans text-charcoal antialiased; }
+  h1, h2, h3, h4 { @apply font-serif; text-wrap: balance; }
+  p { text-wrap: pretty; }
+  :focus-visible { outline: 2px solid rgb(var(--leaf)); outline-offset: 3px; border-radius: 4px; }
+  ::selection { background: rgb(var(--sage)); color: rgb(var(--forest-dark)); }
+}
+
+@layer components {
+  /* Subtle CSS-generated walnut grain — elegant, not rustic */
+  .bg-wood {
+    background-color: rgb(var(--walnut));
+    background-image:
+      linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.45)),
+      repeating-linear-gradient(92deg, rgba(255,255,255,0.025) 0 2px, transparent 2px 9px),
+      repeating-linear-gradient(88deg, rgba(0,0,0,0.18) 0 1px, transparent 1px 23px),
+      radial-gradient(ellipse 120% 40% at 30% 50%, rgba(120,70,35,0.35), transparent 70%),
+      radial-gradient(ellipse 90% 30% at 80% 30%, rgba(95,55,28,0.4), transparent 70%),
+      linear-gradient(90deg, rgb(var(--walnut)), rgb(var(--wood)) 45%, rgb(var(--walnut)));
+  }
+  .bg-forest-lux {
+    background-color: rgb(var(--forest-dark));
+    background-image:
+      radial-gradient(ellipse 60% 70% at 85% 20%, rgba(119,166,59,0.16), transparent 60%),
+      radial-gradient(ellipse 50% 60% at 0% 100%, rgba(11,74,53,0.9), transparent 70%),
+      linear-gradient(135deg, rgb(var(--forest-dark)), rgb(var(--forest)) 55%, rgb(var(--forest-dark)));
+  }
+  .grain::after {
+    content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .06; mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .label { @apply font-sans text-[0.72rem] font-semibold uppercase tracking-label; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}
