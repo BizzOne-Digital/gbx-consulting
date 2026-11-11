@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowRight, Mail, Phone } from "lucide-react";
+import { ArrowRight, Mail, Phone, X } from "lucide-react";
 import { navigation } from "@/data/navigation";
 import { site } from "@/lib/site";
 import { Logo } from "@/components/brand/Logo";
@@ -12,6 +13,8 @@ import { cn } from "@/lib/utils";
 export function MobileMenu({ isActive }: { isActive: (href: string) => boolean }) {
   const [open, setOpen] = useState(false);
   const buttonRef = useRef<HTMLButtonElement>(null);
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
@@ -47,6 +50,8 @@ export function MobileMenu({ isActive }: { isActive: (href: string) => boolean }
         </svg>
       </button>
 
+      {/* Portal to <body>: the scrolled header uses backdrop-blur, which would trap a fixed panel inside it */}
+      {mounted && createPortal(
       <AnimatePresence>
         {open && (
           <>
@@ -55,7 +60,7 @@ export function MobileMenu({ isActive }: { isActive: (href: string) => boolean }
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm"
+              className="fixed inset-0 z-[70] bg-black/50 backdrop-blur-sm lg:hidden"
               onClick={() => setOpen(false)}
             />
             <motion.nav
@@ -66,11 +71,25 @@ export function MobileMenu({ isActive }: { isActive: (href: string) => boolean }
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-              className="grain fixed inset-y-0 right-0 z-50 flex w-full max-w-sm flex-col bg-forest-lux px-7 pb-10 pt-6"
+              className="grain fixed inset-y-0 right-0 z-[80] flex w-full max-w-sm flex-col overflow-y-auto bg-forest-lux px-7 pb-10 pt-6 lg:hidden"
             >
-              <Link href="/" onClick={() => setOpen(false)} aria-label="GBX Consulting — Home">
-                <Logo />
-              </Link>
+              <div className="flex items-center justify-between">
+                <Link href="/" onClick={() => setOpen(false)} aria-label="GBX Consulting — Home">
+                  <Logo />
+                </Link>
+                <button
+                  type="button"
+                  autoFocus
+                  aria-label="Close menu"
+                  onClick={() => {
+                    setOpen(false);
+                    buttonRef.current?.focus();
+                  }}
+                  className="grid h-12 w-12 place-items-center rounded-full border border-champagne/25 text-ivory transition-colors hover:bg-white/10"
+                >
+                  <X aria-hidden className="h-6 w-6" strokeWidth={1.5} />
+                </button>
+              </div>
               <ul className="mt-12 space-y-1">
                 {navigation.map((item, i) => (
                   <motion.li
@@ -112,7 +131,9 @@ export function MobileMenu({ isActive }: { isActive: (href: string) => boolean }
             </motion.nav>
           </>
         )}
-      </AnimatePresence>
+      </AnimatePresence>,
+      document.body,
+      )}
     </div>
   );
 }
