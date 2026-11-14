@@ -8,7 +8,7 @@ export function TestimonialCard({ testimonial, featured = false }: { testimonial
       className={cn(
         "group relative flex h-full flex-col rounded-2xl border p-8 transition-all duration-500 hover:-translate-y-1.5 sm:p-10",
         featured
-          ? "border-forest bg-forest text-ivory shadow-lux"
+          ? "bg-wood border-champagne/20 text-ivory shadow-lux"
           : "border-forest/10 bg-cream hover:border-moss/40 hover:bg-[#eef1e2] hover:shadow-soft",
       )}
     >

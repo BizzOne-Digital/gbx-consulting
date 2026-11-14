@@ -2,12 +2,12 @@ import { Target, Eye } from "lucide-react";
 import { RevealGroup, RevealItem } from "@/components/shared/Reveal";
 import { Diagonals, FlowLines } from "@/components/shared/DecorativeLines";
 
-// Mission adapted from client copy; Vision is PLACEHOLDER copy pending client approval.
+// Mission supplied by client; Vision is PLACEHOLDER copy pending client approval.
 const blocks = [
   {
     icon: Target,
     label: "Our Mission",
-    text: "To build meaningful, collaborative relationships that foster sustainable growth, improved performance, and measurable success for individuals, families, organizations, and communities.",
+    text: "To strengthen the systems, professionals, and partnerships responsible for delivering high-quality human services — helping organizations move beyond policy development toward effective implementation, sustainable practices, and measurable improvements in the communities they serve.",
   },
   {
     icon: Eye,
@@ -18,7 +18,8 @@ const blocks = [
 
 export function MissionSection() {
   return (
-    <section className="grain relative overflow-hidden bg-forest-lux py-24 md:py-32">
+    <section className="bg-wood relative isolate overflow-hidden py-24 md:py-32">
+      <div aria-hidden className="absolute inset-0 -z-10 bg-gradient-to-br from-forest-dark/90 via-forest/80 to-forest-dark/90" />
       <Diagonals />
       <FlowLines className="bottom-0 left-0 h-48 w-full" />
       <RevealGroup className="container relative grid gap-6 lg:grid-cols-2">

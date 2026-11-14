@@ -4,7 +4,8 @@ import { cn } from "@/lib/utils";
 
 export function AudienceStrip() {
   return (
-    <section aria-label="Areas of expertise" className="relative border-y border-champagne/10 bg-forest-dark">
+    <section aria-label="Areas of expertise" className="bg-wood relative isolate border-y border-champagne/15">
+      <div aria-hidden className="absolute inset-0 -z-10 bg-gradient-to-r from-forest-dark/80 via-forest-dark/60 to-forest-dark/80" />
       <RevealGroup className="container grid grid-cols-2 lg:grid-cols-4" stagger={0.1}>
         {expertise.map(({ title, icon: Icon }, i) => (
           <RevealItem

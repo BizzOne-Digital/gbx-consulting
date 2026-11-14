@@ -54,8 +54,8 @@ export function Hero() {
             className="mt-7 block h-[3px] w-20 origin-left rounded bg-leaf"
           />
           <motion.p {...up(0.55)} className="mt-6 max-w-xl text-[1.05rem] leading-relaxed text-ivory/85 sm:mt-7 sm:text-xl">
-            Empowering health, wellness, and performance through evidence-based solutions for governments, state agencies,
-            consumers, and sports organizations.
+            Empowering health education, behavioral health workforce development, and human services through strategic
+            consultation, education, and technical assistance.
           </motion.p>
           <motion.div {...up(0.7)} className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row">
             <CTAButton href="/services">Explore Our Services</CTAButton>
@@ -86,8 +86,8 @@ export function Hero() {
             transition={{ duration: 1.6, ease }}
             className="absolute inset-0"
           >
-            {/* HERO IMAGE: /public/heroOffice.png */}
-            <Image src={images.heroOffice.src} alt={images.heroOffice.alt} fill priority sizes="(min-width:1024px) 45vw, 100vw" className="object-cover object-top lg:object-[center_20%]" />
+            {/* HERO IMAGE: client headshot — /public/shelton-hero.jpg */}
+            <Image src={images.sheltonHero.src} alt={images.sheltonHero.alt} fill priority sizes="(min-width:1024px) 45vw, 100vw" className="object-cover object-[48%_20%]" />
           </motion.div>
           <div aria-hidden className="absolute inset-0 bg-[radial-gradient(ellipse_at_60%_35%,rgba(252,249,242,0.18),transparent_55%)]" />
           <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-forest-dark/70 via-transparent to-transparent lg:bg-gradient-to-r lg:from-forest-dark lg:via-forest-dark/20 lg:to-transparent" />
@@ -122,6 +122,7 @@ export function Hero() {
           </div>
         </dl>
       </div>
+      <div aria-hidden className="bg-wood relative z-10 h-2.5 border-t border-champagne/20" />
     </section>
   );
 }

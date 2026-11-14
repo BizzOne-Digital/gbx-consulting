@@ -16,7 +16,7 @@ export function LeadershipSection() {
         <Reveal direction="left" className="relative mx-auto w-full max-w-md">
           <div aria-hidden className="absolute -right-5 -top-5 h-full w-full rounded-[2rem] border border-champagne/30" />
           <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] shadow-lux">
-            <Image src={images.sheltonGilyard.src} alt={images.sheltonGilyard.alt} fill sizes="(min-width:1024px) 35vw, 90vw" className="object-cover object-top" />
+            <Image src={images.sheltonPortrait.src} alt={images.sheltonPortrait.alt} fill sizes="(min-width:1024px) 35vw, 90vw" className="object-cover object-top" />
             <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-forest-dark/80 via-transparent to-transparent" />
             <div className="absolute bottom-6 left-6 right-6">
               <p className="font-serif text-3xl text-ivory">Shelton Gilyard</p>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ServicesHero } from "@/components/services/ServicesHero";
 import { ServiceDetail } from "@/components/services/ServiceDetail";
+import { ExpertiseSection } from "@/components/about/ExpertiseSection";
 import { ServiceGrid } from "@/components/services/ServiceGrid";
 import { ProcessSection } from "@/components/services/ProcessSection";
 import { ServicesCTA } from "@/components/services/ServicesCTA";
@@ -24,6 +25,7 @@ export default function ServicesPage() {
       {services.slice(0, 2).map((s, i) => (
         <ServiceDetail key={s.slug} service={s} index={i} />
       ))}
+      <ExpertiseSection id="areas-of-expertise" />
       <ServiceGrid />
       {services.slice(2).map((s, i) => (
         <ServiceDetail key={s.slug} service={s} index={i + 2} />

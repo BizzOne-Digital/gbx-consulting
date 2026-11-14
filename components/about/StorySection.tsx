@@ -25,22 +25,23 @@ export function StorySection() {
 
         <Reveal direction="right" className="lg:pt-14">
           <p className="font-serif text-[1.7rem] leading-snug text-forest sm:text-3xl">
-            Founded in 2010 by Shelton Gilyard, GBX Consulting is a trusted provider of behavioral health, wellness, and
-            performance consulting services.
+            Founded in 2010 by Shelton Gilyard, GBX Consulting is a global consulting partner specializing in education,
+            technical assistance, behavioral health workforce development, and human services system enhancement.
           </p>
           <div className="mt-8 space-y-5 text-lg leading-relaxed text-charcoal/75">
             <p>
-              Our comprehensive consultation model addresses behavioral health, organizational development, wellness, and
-              organizational performance enhancement needs through customized and evidence-driven strategies.
+              Our consultative approach combines technical expertise, workforce training, program development, and
+              implementation support to help organizations translate best practices into sustainable, measurable outcomes.
             </p>
             <p>
-              Our services are individualized, culturally competent, and rooted in a strengths-based philosophy that promotes
-              resilience, growth, and long-term success. We specialize in behavioral, organizational, and performance
-              assessments that help clients identify challenges, maximize opportunities, and improve overall outcomes.
+              We work alongside public-sector leaders, educators, and human service professionals to identify service gaps,
+              strengthen operational capacity, and implement culturally responsive, trauma-informed approaches to care.
             </p>
             <p>
-              Through strategic collaboration and professional expertise, we empower clients to achieve personal,
-              organizational, and performance goals with confidence and clarity.
+              GBX Consulting brings a collaborative, culturally responsive, and solutions-oriented perspective to every
+              engagement. Our experience working across diverse geographic, cultural, and organizational environments
+              positions us to support both established human service systems and emerging programs seeking to expand their
+              capacity.
             </p>
           </div>
         </Reveal>

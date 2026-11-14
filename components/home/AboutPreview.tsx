@@ -34,13 +34,21 @@ export function AboutPreview() {
             in <em className="text-moss">Behavioral Health</em>
           </h2>
           <p className="mt-7 text-lg leading-relaxed text-charcoal/75">
-            Founded in 2010 by Shelton Gilyard, GBX Consulting is a trusted provider of behavioral health, wellness, and
-            performance consulting services — backed by an experienced network of multidisciplinary professionals.
+            GBX Consulting is a global consulting partner specializing in education, technical assistance, behavioral health
+            workforce development, and human services system enhancement.
           </p>
           <p className="mt-4 leading-relaxed text-charcoal/70">
-            We improve client outcomes through evidence-based practices, strategic intervention models, and individualized
-            support for individuals, families, organizations, and communities.
+            We collaborate with government agencies, school districts, and international partners to strengthen service
+            delivery systems, build organizational capacity, and advance evidence-informed practices that improve individual,
+            family, and community well-being.
           </p>
+          <ul className="mt-7 flex flex-wrap gap-2">
+            {["Technical Expertise", "Workforce Training", "Program Development", "Implementation Support"].map((t) => (
+              <li key={t} className="rounded-full border border-moss/30 bg-ivory px-4 py-1.5 text-sm text-forest">
+                {t}
+              </li>
+            ))}
+          </ul>
           <CTAButton href="/about" variant="secondary" className="mt-9">
             Learn More About Us
           </CTAButton>

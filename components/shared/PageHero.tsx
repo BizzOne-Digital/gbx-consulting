@@ -32,6 +32,7 @@ export function PageHero({ label, title, intro, image, children }: PageHeroProps
         <Image src={img.src} alt={img.alt} fill sizes="100vw" className="object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-forest-dark via-forest-dark/20 to-transparent" />
       </div>
+      <div aria-hidden className="bg-wood relative z-10 h-2.5 border-t border-champagne/20" />
     </section>
   );
 }
