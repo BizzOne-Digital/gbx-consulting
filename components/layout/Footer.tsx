@@ -20,7 +20,8 @@ export function Footer() {
       <div className="container relative grid gap-12 py-20 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.3fr]">
         <div>
           <Logo />
-          <p className="mt-6 font-serif text-2xl italic leading-snug text-champagne">{site.tagline}</p>
+          <p className="label mt-5 text-[0.62rem] text-champagne/70">{site.meaning}</p>
+          <p className="mt-4 font-serif text-2xl italic leading-snug text-champagne">{site.tagline}</p>
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-ivory/60">
             Serving individuals, families, schools, athletic programs, healthcare organizations and community agencies since {site.founded}.
           </p>

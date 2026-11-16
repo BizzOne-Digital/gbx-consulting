@@ -6,6 +6,7 @@ export const site = {
   tagline: "Strategic Behavioral Health & Performance Consulting",
   description:
     "Strategic consulting for governments, state agencies, behavioral health organizations and sports organizations focused on stronger systems, leadership and performance.",
+  meaning: "Gilyard Behavioral Health", // What "GBX" stands for (confirmed by client)
   founder: "Shelton Gilyard",
   founded: "2010",
   email: "gilyardbehavioralhealth@gmail.com",

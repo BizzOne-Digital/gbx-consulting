@@ -28,6 +28,12 @@ export function StorySection() {
             Founded in 2010 by Shelton Gilyard, GBX Consulting is a global consulting partner specializing in education,
             technical assistance, behavioral health workforce development, and human services system enhancement.
           </p>
+          <p className="mt-6 flex items-center gap-3 text-sm text-moss">
+            <span aria-hidden className="h-px w-8 bg-leaf" />
+            <span>
+              <strong className="font-semibold tracking-wide">GBX</strong> stands for <em className="font-serif text-base">Gilyard Behavioral Health</em>
+            </span>
+          </p>
           <div className="mt-8 space-y-5 text-lg leading-relaxed text-charcoal/75">
             <p>
               Our consultative approach combines technical expertise, workforce training, program development, and

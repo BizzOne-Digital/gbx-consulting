@@ -44,6 +44,7 @@ const orgJsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   name: "GBX Consulting",
+  alternateName: site.meaning,
   url: SITE_URL,
   description: site.description,
   email: site.email,
