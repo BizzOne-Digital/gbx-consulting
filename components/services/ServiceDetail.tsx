@@ -36,19 +36,41 @@ export function ServiceDetail({ service, index }: { service: Service; index: num
               <p key={p.slice(0, 24)}>{p}</p>
             ))}
           </div>
-          <h3 className="label mt-10 text-forest">{service.slug === "training" ? "Training Focus Areas" : "Areas of Focus"}</h3>
-          <ul className="mt-5 grid gap-3 sm:grid-cols-2">
+          <h3 className="label mt-10 text-forest">What&apos;s Included</h3>
+          <ul className="mt-5 space-y-3">
             {service.areas.map((a) => (
-              <li key={a} className="flex items-start gap-3 rounded-xl border border-forest/10 bg-white/60 px-4 py-3 text-[0.95rem] text-charcoal/85">
-                <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-moss text-ivory">
-                  <Check aria-hidden className="h-3 w-3" strokeWidth={3} />
+              <li key={a.title} className="flex items-start gap-4 rounded-xl border border-forest/10 bg-white/70 px-5 py-4">
+                <span className="mt-1 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-moss text-ivory">
+                  <Check aria-hidden className="h-3.5 w-3.5" strokeWidth={3} />
                 </span>
-                {a}
+                <span>
+                  <span className="block font-semibold text-forest-dark">{a.title}</span>
+                  <span className="mt-1 block text-[0.93rem] leading-relaxed text-charcoal/70">{a.description}</span>
+                </span>
               </li>
             ))}
           </ul>
-          <CTAButton href="/contact" variant="secondary" className="mt-10">
-            {service.slug === "merchandise" ? "Ask About Merchandise" : `Inquire About ${service.title}`}
+
+          {service.topics && (
+            <>
+              <h3 className="label mt-9 text-forest">{service.topics.heading}</h3>
+              <ul className="mt-4 flex flex-wrap gap-2">
+                {service.topics.items.map((t) => (
+                  <li key={t} className="rounded-full border border-moss/30 bg-ivory px-4 py-1.5 text-sm text-forest">
+                    {t}
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
+
+          <div className="mt-9 rounded-2xl border-l-2 border-leaf bg-forest/[0.04] px-5 py-4">
+            <p className="label text-[0.65rem] text-moss">Ideal For</p>
+            <p className="mt-2 text-[0.95rem] text-charcoal/80">{service.idealFor.join(" · ")}</p>
+          </div>
+
+          <CTAButton href="/contact" variant="secondary" className="mt-9">
+            {service.cta}
           </CTAButton>
         </Reveal>
       </div>

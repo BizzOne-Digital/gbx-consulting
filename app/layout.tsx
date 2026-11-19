@@ -51,7 +51,7 @@ const orgJsonLd = {
   telephone: "+1-888-280-8204",
   foundingDate: site.founded,
   founder: { "@type": "Person", name: site.founder },
-  areaServed: ["Southwest Florida", "South America"],
+  areaServed: ["United States", "Caribbean", "South America"],
   slogan: "Elevate Performance",
 };
 

@@ -35,15 +35,18 @@ export function Hero() {
             GBX Consulting
             <span aria-hidden className="h-px w-12 bg-leaf" />
           </motion.p>
-          <h1 className="mt-6 font-serif leading-[0.92] text-ivory">
-            <motion.span {...up(0.2)} className="block text-[3.6rem] sm:text-[5.5rem] xl:text-[7.25rem]">
-              Elevate
+          <h1 className="mt-6 font-serif leading-[1.02] text-ivory">
+            <motion.span {...up(0.2)} className="block text-[2.6rem] sm:text-[3.6rem] lg:text-[3.4rem] xl:text-[4.4rem]">
+              Transforming People.
+            </motion.span>
+            <motion.span {...up(0.3)} className="block text-[2.6rem] sm:text-[3.6rem] lg:text-[3.4rem] xl:text-[4.4rem]">
+              Strengthening Organizations.
             </motion.span>
             <motion.span
-              {...up(0.35)}
-              className="block bg-gradient-to-r from-champagne via-[#e9dcbc] to-sage bg-clip-text pb-2 text-[3.6rem] italic text-transparent sm:text-[5.5rem] xl:text-[7.25rem]"
+              {...up(0.4)}
+              className="block bg-gradient-to-r from-champagne via-[#e9dcbc] to-sage bg-clip-text pb-2 text-[2.6rem] italic text-transparent sm:text-[3.6rem] lg:text-[3.4rem] xl:text-[4.4rem]"
             >
-              Performance
+              Elevating Performance.
             </motion.span>
           </h1>
           <motion.span
@@ -54,8 +57,8 @@ export function Hero() {
             className="mt-7 block h-[3px] w-20 origin-left rounded bg-leaf"
           />
           <motion.p {...up(0.55)} className="mt-6 max-w-xl text-[1.05rem] leading-relaxed text-ivory/85 sm:mt-7 sm:text-xl">
-            Empowering health education, behavioral health workforce development, and human services through strategic
-            consultation, education, and technical assistance.
+            GBX Consulting delivers strategic behavioral health, organizational development, professional training, and
+            performance solutions that create measurable impact.
           </motion.p>
           <motion.div {...up(0.7)} className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row">
             <CTAButton href="/services">Explore Our Services</CTAButton>

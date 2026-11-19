@@ -14,11 +14,11 @@ export function ServicesPreview() {
           tone="light"
           label="Our Services"
           title={<>Comprehensive <em className="text-champagne">Consulting</em> Solutions</>}
-          intro="Three divisions working together to strengthen organizations, develop people and elevate performance."
+          intro="Consulting, training and performance solutions that strengthen organizations, develop people and create measurable impact."
         />
-        <RevealGroup className="mt-16 grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
+        <RevealGroup className="mt-16 grid gap-7 sm:grid-cols-2 xl:grid-cols-4">
           {services.map((s) => (
-            <RevealItem key={s.slug} className={s.slug === "merchandise" ? "sm:col-span-2 lg:col-span-1" : ""}>
+            <RevealItem key={s.slug} className="h-full">
               <ImageCard title={s.title} description={s.summary} image={s.image} icon={s.icon} href={`/services#${s.slug}`} />
             </RevealItem>
           ))}

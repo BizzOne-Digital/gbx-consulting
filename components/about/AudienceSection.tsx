@@ -10,7 +10,7 @@ export function AudienceSection() {
           <SectionHeading
             label="Who We Serve"
             title={<>Organizations &amp; People Ready to <em className="text-moss">Grow</em></>}
-            intro="Culturally responsive, strengths-based services tailored to the unique needs of every client we serve — across Southwest Florida and South America."
+            intro="Culturally responsive, strengths-based services tailored to the unique needs of every client we serve — across the U.S., the Caribbean and South America."
           />
         </div>
         <RevealGroup className="divide-y divide-forest/10 border-y border-forest/10" stagger={0.08}>

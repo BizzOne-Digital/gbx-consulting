@@ -21,12 +21,34 @@ export interface Audience {
   icon: LucideIcon;
 }
 
-// Homepage expertise strip
-export const expertise: Audience[] = [
-  { title: "Government Partnerships", description: "Strategic support for public organizations strengthening systems and program outcomes.", icon: Landmark },
-  { title: "State Agency Support", description: "Assessment, planning and performance improvement for agencies serving communities.", icon: Users },
-  { title: "Behavioral Health Solutions", description: "Consultation and program development for behavioral health and wellness organizations.", icon: Leaf },
-  { title: "Sports Organization Performance", description: "Leadership culture and athlete development support for athletic programs.", icon: Trophy },
+export interface Pathway extends Audience {
+  href: string;
+  services: string[];
+}
+
+// Homepage pathways (client final edits) — helps visitors self-identify immediately.
+export const expertise: Pathway[] = [
+  {
+    title: "Government & Public Sector",
+    description: "Strategic consulting, program evaluation and workforce training for government and state agencies strengthening public service systems.",
+    icon: Landmark,
+    href: "/services#consulting",
+    services: ["Agency consulting", "Program evaluation", "Strategic planning"],
+  },
+  {
+    title: "Healthcare & Community Organizations",
+    description: "Behavioral health program development, organizational assessments and staff training for healthcare, school and community partners.",
+    icon: HeartHandshake,
+    href: "/services#training",
+    services: ["Behavioral health programs", "Staff development", "Cultural competency"],
+  },
+  {
+    title: "Sports & Athletic Organizations",
+    description: "Athlete development, coaching leadership, mental wellness and team culture support for athletic programs.",
+    icon: Trophy,
+    href: "/services#sports",
+    services: ["Athlete development", "Team culture", "Performance improvement"],
+  },
 ];
 
 // About page — who we serve (from client copy)

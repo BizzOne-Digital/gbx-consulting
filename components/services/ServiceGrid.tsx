@@ -17,7 +17,7 @@ export function ServiceGrid() {
           title={<>Expertise Across <em className="text-champagne">Every Arena</em></>}
           intro="Our consulting and training divisions are tailored to the unique environments of the sectors we serve."
         />
-        <RevealGroup className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <RevealGroup className="mt-16 grid gap-6 md:grid-cols-3">
           {expertise.map((e, i) => (
             <RevealItem key={e.title}>
               <IconCard tone="dark" index={i} icon={e.icon} title={e.title} description={e.description} />

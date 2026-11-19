@@ -59,7 +59,6 @@ export function Footer() {
                 <Link href={`/services#${s.slug}`} className="text-ivory/70 transition-colors hover:text-sage">{s.title}</Link>
               </li>
             ))}
-            <li><Link href="/services#sectors" className="text-ivory/70 transition-colors hover:text-sage">Sports Organization Performance</Link></li>
           </ul>
         </div>
 

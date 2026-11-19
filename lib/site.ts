@@ -13,5 +13,5 @@ export const site = {
   phone: "1-888-280-8204",
   phoneHref: "tel:+18882808204",
   social: { handle: "@GilyardHealth", label: "Gilyard Health", href: "#" }, // TODO: confirm platform + profile URL with client
-  regions: "Southwest Florida & South America",
+  regions: "U.S., Caribbean & South America",
 };

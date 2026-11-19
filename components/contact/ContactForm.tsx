@@ -7,13 +7,12 @@ import { cn } from "@/lib/utils";
 
 const orgTypes = ["Government", "State Agency", "Behavioral Health Organization", "Sports Organization", "Individual / Consumer", "Other"];
 const serviceOptions = [
-  "Consulting",
-  "Training",
+  "Strategic Consulting",
+  "Professional Training & Development",
+  "Sports & Performance Consulting",
+  "Government & Public Sector",
+  "Healthcare & Community Organizations",
   "Merchandise",
-  "Government Consulting",
-  "State Agency Support",
-  "Behavioral Health Solutions",
-  "Performance & Sports Consulting",
   "General Inquiry",
 ];
 
